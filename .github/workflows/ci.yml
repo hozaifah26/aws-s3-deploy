@@ -103,7 +103,7 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          BUCKET_NAME=aws-ci-cd-fe
+          BUCKET_NAME=aws-ci-cd-fe-hozaifah
           echo "Syncing files to S3..."
           aws s3 sync . s3://$BUCKET_NAME --delete
           echo "✅ Files synced!"
@@ -112,4 +112,4 @@ jobs:
         run: |
           REGION=${{ secrets.AWS_REGION }}
           echo "🌐 Website URL:"
-          echo "http://aws-ci-cd-fe.s3-website-$REGION.amazonaws.com"
+          echo "http://aws-ci-cd-fe-hozaifah.s3-website-$REGION.amazonaws.com"
